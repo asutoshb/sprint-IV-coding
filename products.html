@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Jewellery</title>
+    <style>
+        #product{
+            display: grid;
+            gap: 2%;
+            grid-template-columns: repeat(3, 30%);
+        }
+        #product div{
+            width: 30%;
+            height: 300px;
+            margin: auto;
+            margin-top: 25px;
+        }
+        
+        #product img{
+            width: 100%;
+            height: 50%;
+        }
+        #cart{
+            margin-left: 80%;
+        }
+        #cart button{
+            width: 100px;
+            height: 50px;
+
+        }
+           #cart1{
+            width: 100px;
+            height: 60px;
+            background-color: yellowgreen;
+            border-radius: 20px;
+            margin-top:  5px;
+        }
+        #cart1:hover{
+            background-color: black;
+            color: white;
+            font-size: 17px;
+        }
+         .bb{
+            background-color: rgb(216, 100, 100);
+            border-radius: 10px;
+            color: white;
+        }
+          .bb:hover{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>All Jewelleries</h1>
+<div id="cart">
+    <button onclick="go()" id="cart1">Cart</button>
+    </div>
+
+    <button onclick="price_sort()" class="bb">Sort By Price Low to High</button>
+    <button onclick="price_sort1()" class="bb">Sort By Price High to Low</button>
+
+
+   <label>Filter By Brand</label>
+   <input type="checkbox" id="t">Tanishq</input>
+<input type="checkbox" id="k">Khimji</input>
+<input type="checkbox" id="a">Arundhati</input>
+<input type="checkbox" id="ka">Kalyan</input>
+
+<br><br>
+<label>Enter price range</label>
+<input type="number" id="r1" placeholder="starting price">
+<input type="number" id="r2" placeholder="ending price">
+<button onclick="price()" class="bb">Click To View</button>
+
+    <div id="product"></div>
+
+</body>
+</html>
+
+<script src="products.js"> 
+
+</script>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #cart{
+            display: grid;
+            gap: 2%;
+            grid-template-columns: repeat(3, 30%);
+        }
+        #cart div{
+            width: 30%;
+            height: 300px;
+            margin: auto;
+            margin-top: 25px;
+        }
+        
+        #cart img{
+            width: 100%;
+            height: 50%;
+        }
+        #check{
+            width: 100px;
+            height: 60px;
+            background-color: yellowgreen;
+            border-radius: 20px;
+        }
+        #check:hover{
+            background-color: black;
+            color: white;
+            font-size: 17px;
+        }
+        #promo{
+            background-color: rgb(216, 100, 100);
+            border-radius: 10px;
+            color: white;
+        }
+          #promo:hover{
+            background-color: black;
+            color: white;
+        }
+    </style>
+    <title>cart</title>
+</head>
+<body>
+    <h1 style="color: orangered;">Cart</h1>
+
+    <label>Total Items</label>
+    <input type="text" id="total"><br><br>
+    <label>Total Amount</label>
+    <input type="text" id="amount">
+    <br>
+    <p id="dis"></p>
+    <input type="text" id="code">
+    <button id="promo" onclick="disc()">Apply promocode</button>
+<br><br>
+    <button id="check" onclick="check()">CheckOut</button>
+<div id="cart">
+
+    </div>
+</body>
+</html>
+
+<script src="cart.js"></script>

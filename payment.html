@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #success{
+            width: 100%;
+            margin: auto;
+            font-size: 55px;
+            text-align: center;
+
+            color: rgb(223, 35, 35);
+        }
+
+           #place{
+            width: 100px;
+            height: 50px;
+            background-color: yellowgreen;
+            border-radius: 20px;
+            margin-top:  5px;
+        }
+        #place:hover{
+            background-color: black;
+            color: white;
+            font-size: 17px;
+        }
+    </style>
+    <title>Payment</title>
+</head>
+<body>
+    <h1 style="color: orangered;">Payment Page</h1>
+
+    <label>Enter your Debit Card Details</label><br>
+    <input type="text" placeholder="xxxxx"><br>
+    <br>
+    <button onclick="place()" id="place">Place Your Order</button>
+
+    <div id="success"></div>
+</body>
+</html>
+
+<script>
+
+
+    let success = document.getElementById("success");
+
+
+
+    function place() {
+
+        let promise = new Promise(function(resolve, reject) {
+
+            setTimeout(function() {
+
+                resolve('Your order is successfully placed');
+
+            }, 3000)
+
+        })
+
+        promise.then(function(res){
+
+            success.innerHTML = res;
+
+        })
+
+    }
+
+</script>

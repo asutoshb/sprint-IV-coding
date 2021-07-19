@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            width: 80%;
+            margin: auto;
+        }
+         #pay{
+            width: 100px;
+            height: 60px;
+            background-color: yellowgreen;
+            border-radius: 20px;
+            margin-top:  5px;
+        }
+        #pay:hover{
+            background-color: black;
+            color: white;
+            font-size: 17px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="color: orangered;">Check Out</h1>
+
+    <label>Add your Address</label><br>
+    <input type="text" placeholder="Address"><br>
+    <button onclick="payment()" id="pay">Payment</button>
+</body>
+</html>
+
+<script>
+    function payment() {
+        window.open("payment.html")
+    }
+</script>
